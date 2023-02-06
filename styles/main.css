@@ -56,3 +56,119 @@ body {
 .header-nav a.active::after {
   background-color: #FFC725;
 }
+
+/*  */
+.button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  gap: 10px;
+}
+
+.button-item {
+  position: relative;
+}
+
+/*  */
+/* основной вариант расположения button-count */
+.button-count {
+  font-weight: 700;
+  font-size: 13px;
+  color: #FFFFFF;
+  background: #F37335;
+  border-radius: 50%;
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  text-align: center;
+  line-height: 1.3;
+  bottom: 3px;
+  right: -4px;
+}
+
+/* другой вариант расположения button-count
+.circle {
+  background: #F37335;
+  border-radius: 50%;
+  width: 17px;
+  height: 17px;
+
+  position: absolute;
+  bottom: 3px;
+  right: -4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-count {
+  font-weight: 700;
+  font-size: 13px;
+  color: #FFFFFF;
+} 
+*/
+
+.button-text {
+  font-weight: 700;
+  font-size: 15px;
+  color: #443737;
+}
+
+/*  */
+.bg {
+  text-align: center;
+  color: #fff;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 142px 0;
+}
+
+.breadcrumbs {
+  padding-left: 0;
+  margin-top: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.breadcrumbs a {
+  font-family: 'Open Sans', sans-serif;
+  color: #DEDEDE;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  text-align: center;
+}
+
+.breadcrumbs a::before {
+  content: '/';
+  position: relative;
+  left: -7px;
+}
+
+.breadcrumbs li:first-child a::before {
+  display: none;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 79px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.description {
+  color: #FAF9F9;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.5;
+  /* line-height: 24px; почему line-height: 1.5; а не line-height: 1.6; ??? */
+  max-width: 320px;
+  margin: 0 auto;
+}
