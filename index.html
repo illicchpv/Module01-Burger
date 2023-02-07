@@ -29,6 +29,15 @@ Lato Bold
 
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
+
+  <script>
+    // UN_REGISTER SERVICE WORKERs
+    navigator.serviceWorker.getRegistrations().then(function (registrations) {
+      for (let registration of registrations) {
+        registration.unregister();
+      }
+    });
+  </script>
 </head>
 
 <body>
@@ -37,7 +46,7 @@ Lato Bold
   -->
 
   <header>
-    <div class="conteiner">
+    <div class="container">
       <div class="header">
         <a class="header-logo" href="#"></a>
         <nav>
@@ -63,7 +72,7 @@ Lato Bold
     </div>
   </header>
   <div class="bg">
-    <div class="conteiner">
+    <div class="container">
       <ul class="breadcrumbs">
         <li><a href="#">Главная</a></li>
         <li><a href="#">Меню</a></li>
@@ -76,7 +85,7 @@ Lato Bold
   </div>
   <main>
     <div class="banner">
-      <div class="conteiner">
+      <div class="container">
         <div class="banner-box">
           <h2 class="banner-title">
             <span>
