@@ -78,6 +78,8 @@ header {
 
 .button-item {
   position: relative;
+  width: 168px;
+  text-align: right;
 }
 
 /*  */
@@ -201,50 +203,52 @@ header {
 .banner-box {
   background-image: url(../images/banner.jpg);
   background-size: cover;
-  background-position: center right;
+  background-position: center center;
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 120px;
+  /* 100px не совпадает нижний край банера */
   padding-left: 100px;
 }
 
 .banner-title {
-  padding: 0;
-  margin: 0;
+  font-weight: 900;
+  font-size: 60px;
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .banner-title span {
+  display: block;
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 14px;
+  line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
   background-color: #F37335;
-  padding: 5px 20px 5px 17px;
+  padding: 2px 0;
+  margin-bottom: 9px;
   border-radius: 14px;
-  margin-bottom: 3px;
-}
-
-.banner-title div {
-  font-family: 'Nunito Sans';
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 76px;
+  max-width: 96px;
 }
 
 .banner-text {
   font-family: 'Open Sans';
   font-weight: 400;
   font-size: 15px;
-  line-height: 24px;
+  line-height: 1.6;
   color: #FAF9F9;
-  max-width: 30%;
+  max-width: 353px;
+  margin-top: 0;
+  margin-bottom: 35px;
 }
 
 .banner-link {
   text-decoration: none;
-  display: inline-block;
   background-color: #FBB731;
   border-radius: 5px;
-  padding: 20px 24px;
+  padding: 20px 27px;
 
   font-family: 'Nunito Sans';
   font-weight: 700;
@@ -254,3 +258,5 @@ header {
   text-transform: uppercase;
   color: #1E2F40;
 }
+
+/*  */
