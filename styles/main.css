@@ -53,6 +53,9 @@ header {
   /* line-height: 24px; устраняется в normalize */
   color: #443737;
   text-decoration: none;
+
+  transition: color 300ms;
+  transition-timing-function: ease-out;
 }
 
 .header-nav a:hover {
@@ -163,6 +166,9 @@ header {
   font-weight: 400;
   font-size: 15px;
   text-align: center;
+
+  transition: color 300ms;
+  transition-timing-function: ease-out;
 }
 
 .breadcrumbs a:hover {
@@ -174,6 +180,9 @@ header {
   position: relative;
   left: -4px;
   pointer-events: none;
+
+  transition: none;
+  /* transition: color 0ms; */
 }
 
 .breadcrumbs a:hover::before {
@@ -266,6 +275,8 @@ header {
   text-transform: uppercase;
   color: #1E2F40;
   border: 1px solid #FBB731;
+  transition: color 300ms, background-color 300ms;
+  transition-timing-function: ease-out;
 }
 
 .banner-link:hover{
@@ -379,6 +390,8 @@ header {
   border-radius: 5px;
   padding-top: 4px;
   padding-left: 3px;
+  transition: color 300ms, background-color 300ms;
+  transition-timing-function: ease-out;
 }
 
 .menu-grid-btn:hover{
