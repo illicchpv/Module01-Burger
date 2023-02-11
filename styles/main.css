@@ -181,8 +181,7 @@ header {
   left: -4px;
   pointer-events: none;
 
-  transition: none;
-  /* transition: color 0ms; */
+  color: #DEDEDE;
 }
 
 .breadcrumbs a:hover::before {
