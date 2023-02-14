@@ -37,6 +37,19 @@ Lato Bold
       }
     });
   </script>
+  <style>
+    /* html { scroll-behavior: smooth; -webkit-scroll-behavior: smooth } */
+    /* *, html {
+  
+      scroll-behavior: smooth !important;
+    } */
+    /* html, body { 
+      scroll-behavior: smooth
+    } */
+    /* html:focus-within {
+      scroll-behavior: smooth;
+    }     */
+  </style>
 </head>
 
 <body>
@@ -44,7 +57,7 @@ Lato Bold
     https://illicchpv.github.io/Module01-Burger/menu.html
   -->
 
-  <header style="-display: none;">
+  <header id="headerTop" style="-display: none;">
     <div class="container">
       <div class="header">
         <div class="header-item">
@@ -279,6 +292,53 @@ Lato Bold
     </div>
   </footer>
 
+  <a class="button-up hidden" id="btnUp" href="#headerTop">Наверх</a>
+
+  <script>
+    // для хрома приходится менять сетинги --  chrome://flags/#smooth-scrolling
+    // Smooth Scroll
+    const links = document.querySelectorAll(".banner-link");
+
+    for (const link of links) {
+      link.addEventListener("click", clickHandler);
+    }
+
+    function clickHandler(e) {
+      e.preventDefault();
+      const href = this.getAttribute("href"); //  "#menuBurger"; //
+
+      document.querySelector(href).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    // Button Up
+    window.onscroll = function () { scrollFunction() };
+
+    const upbuttons = document.querySelectorAll(".button-up");
+
+    for (const upbutton of upbuttons) {
+      upbutton.addEventListener("click", clickUpHandler);
+    }
+
+    function clickUpHandler(e) {
+      e.preventDefault();
+      const href = this.getAttribute("href"); // #headerTop
+
+      document.querySelector(href).scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+        document.getElementById('btnUp').className = 'button-up visible';
+      } else {
+        document.getElementById('btnUp').className = 'button-up hidden';
+      }
+    }
+
+  </script>
 </body>
 
 </html>

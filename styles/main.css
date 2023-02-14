@@ -223,7 +223,7 @@ header {
   padding-bottom: 120px;
   /* 100px не совпадает нижний край банера */
   padding-left: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 }
 
 .banner-title {
@@ -284,7 +284,9 @@ header {
 }
 
 /*  */
-.menu {}
+.menu {
+  padding-top: 20px;
+}
 
 .menu-header {
   display: flex;
@@ -492,13 +494,42 @@ header {
   /* color: #DEDEDE; */
 }
 
-/* ==================== */
 .footer-list {
   padding-left: 0;
   list-style-type: none;
 }
 
-/* ++++++++++++++++ */
+.button-up{
+  background-color: #FBB731;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #1E2F40;
+  text-decoration: none;
+  padding: 5px 20px;
+  padding-top: 7px;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  
+  transition: color 300ms, background-color 300ms, opacity 1s;
+  transition-timing-function: ease-out;
+
+}
+.button-up:hover{
+  cursor: pointer;
+  background-color: #F37335;
+}
+.button-up.hidden{
+  opacity: 0;
+}
+.button-up.visible{
+  opacity: 1;
+}
+
+
+/* ++++++++ styles Index ++++++++ */
 .main {
   background: linear-gradient(180deg, #0C4C7B -100%, #1E2F40 100%);
 }
