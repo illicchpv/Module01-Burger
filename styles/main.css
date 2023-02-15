@@ -702,6 +702,18 @@ header {
   .menu-extend-container {
     overflow-x: auto;
   }
+  /* Скрываем scrollbar для Chrome, Safari и Opera */
+  .menu-extend-container::-webkit-scrollbar {
+    display: none;
+  }
+  /* Скрываем scrollbar для Firefox */
+  .menu-extend-container {
+    scrollbar-width: none; 
+  }  
+  /* Скрываем scrollbar для IE, Edge */
+  /* .menu-extend-container {
+    -ms-overflow-style: none;
+  }   */
 
   .menu-grid-extend {
     width: 1000px;
