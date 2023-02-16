@@ -353,7 +353,7 @@ header {
   transform: translate(-50%, -50%);
   object-fit: cover;
   width: 100%;
-  height: 430px;
+  /* height: 430px; */
 }
 
 .menu-grid-title {
@@ -719,11 +719,15 @@ header {
   /* Скрываем scrollbar для IE, Edge */
   /* .menu-extend-container {
     -ms-overflow-style: none;
-  }   */
+  }*/
 
   .menu-grid-extend {
     width: 1000px;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu-extend .menu-grid-cover{
+    height: 320px;
   }
 
   .footer {
