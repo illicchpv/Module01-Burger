@@ -61,6 +61,9 @@ Lato Bold
   <header id="headerTop" style="-display: none;">
     <div class="container">
       <div class="header">
+        <div class="header-burger">
+          <button class="burger"  onclick="openModal()"></button>
+        </div>
         <div class="header-item">
           <a class="header-logo" href="index.html"></a>
           <nav>
@@ -303,6 +306,16 @@ Lato Bold
 
   <a class="button-up hidden" id="btnUp" href="#headerTop">Наверх</a>
 
+  <div class="modal" id="modal">
+    <ul class="header-nav">
+      <li><a href="index.html">Главная</a></li>
+      <li><a class="active" href="#">Меню</a></li>
+      <li><a href="#">О&nbsp;нас</a></li>
+      <li><a href="#">Контакты</a></li>
+    </ul>
+    <button class="burger-close" onclick="closeModal()"></button>
+  </div>
+
   <script>
     // для хрома приходится менять сетинги --  chrome://flags/#smooth-scrolling
     // Smooth Scroll
@@ -347,6 +360,13 @@ Lato Bold
       }
     }
 
+    // burger modal menu
+    function openModal() {
+      document.getElementById("modal").style.top = "0px";
+    }
+    function closeModal() {
+      document.getElementById("modal").style.top = "-400px";
+    }
   </script>
 </body>
 
