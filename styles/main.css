@@ -856,6 +856,12 @@ header {
   .footer-list-tel1{
     display: none;
   }
+
+  .footer-box .footer-item-mobile{
+    display: flex;
+    justify-content: space-between;
+  }
+
   .footer-list-tel0{
     display: inline-block;
     margin-left: 20px;
@@ -865,7 +871,8 @@ header {
   }  
   .footer-list-tel a {
     font-size: 18px;
-}  
+  }  
+
 }
 @media (max-width: 567px){
   .title{
@@ -900,6 +907,7 @@ header {
   .menu-header {
     margin-bottom: 23px;
   }
+
 }
 @media (max-width: 360px){
   .header-logo {
