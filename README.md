@@ -8,6 +8,7 @@
 ### содержание
 ###
 ###
-#### *[демо сайта](https://annblok.github.io/Module01-Burger/menu.html)
 #### *[макет сайта figma](https://www.figma.com/file/8muxUNt1PwGH5byQR6LZG8/Burgers-Menu-Responsive?node-id=702%3A197&t=WhYOw6ArujwHSb5s-0)
+#### *[демо сайта](https://annblok.github.io/Module01-Burger/menu.html)
+#### *[моя версия](https://illicchpv.github.io/Module01-Burger/menu.html)
 ####
