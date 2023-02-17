@@ -912,11 +912,31 @@ header {
   }
 
 }
+@media (max-width: 450px){
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }  
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14.5px;
+  }
+  .menu-grid-extend {
+    grid-template-columns: repeat(3, 1fr);
+    width: 130vw;
+  }  
+  .menu-select {
+    flex-basis: 136px;
+  }  
+}
 @media (max-width: 360px){
   .header-logo {
     width: 116px;
     height: 37px;
     background-size: cover;
+  }
+  .menu-select{
+    padding: 13px 20px;
   }
 }
 @media (max-width: 320px){
