@@ -1,4 +1,5 @@
-# Burgers - тренировочный сайт от учебного проекта * [Annblock.ru(https://annblok.ru/)]
+# Burgers - тренировочный сайт от учебного проекта 
+* [Annblock.ru(https://annblok.ru/)]
 ##
 ## Базовый курс 4.0
 ## 
