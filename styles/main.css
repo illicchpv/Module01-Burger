@@ -836,9 +836,9 @@ header {
   .header{
     gap: 21px;
   }
-  .menu-grid-title{
-    font-size: 13px;
-  }
+  .menu-grid-title {
+    font-size: 24px;
+  }  
   .menu-grid-cover{
     height: 55vw;
   }
@@ -907,6 +907,10 @@ header {
     background-position: 85% center;
   }
 
+  .menu-grid-title{
+    font-size: 18px;
+  } 
+
   .menu-header {
     margin-bottom: 23px;
   }
@@ -928,6 +932,10 @@ header {
   .menu-select {
     flex-basis: 136px;
   }  
+  .menu-grid-title{
+    font-size: 15px;
+  } 
+
   .menu-grid-btn {
     width: 129px;
   }  
@@ -941,6 +949,10 @@ header {
   .menu-select{
     padding: 13px 20px;
   }
+  .menu-grid-title{
+    font-size: 13px;
+  } 
+
 }
 @media (max-width: 320px){
   .banner-box{
