@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/test.css">
+
+</head>
+
+<body>
+  <h1>test.html</h1>
+  <!--  -->
+  <div style="-display: none;" class="wraper" title="image resize & reposition">
+    <style>
+      :root {
+        --bg-color2: white;
+        --ds: (1000 - 500); /* 1000 начальный размер экрана 500 конечный */
+        --cs: (100vw - 500px); /* 100vw текущий размер экрана 500px конечный*/
+        --ks: (120 - 30)/var(--ds); /* коеффициент для размера */
+        --kx: (370 - 70)/var(--ds); /* коеффициент для X */
+        --ky: (30 - 130)/var(--ds); /* коеффициент для Y */
+      }
+      .img-wraper {
+        max-width: 1000px;
+        height: 80vh;
+        background-color: var(--bg-color2);
+        line-height: 1;
+      }
+      .img1 {
+        position: absolute;
+        /* width: 120px; */
+        width: calc(30px + var(--ks)*var(--cs));
+        /* top: 30px; */
+        top: calc(130px + var(--ky)*var(--cs));
+        /* left: 370px; */
+        left: calc(70px + var(--kx)*var(--cs));
+      }
+      .img2 {
+        position: absolute;
+        width: 30px;
+        top: 130px;
+        left: 70px;
+      }
+    </style>
+    <div class="img-wraper">
+      <img class="img1" src="images/close.svg" alt="">
+      <img class="img2" src="images/close.svg" alt="">
+    </div>
+  </div>
+  <!--  -->
+  <div style="display: none;" class="wraper" title="font resize">
+    <style>
+      /* 
+ss1 - максимальный размер экрана = 1000px
+ss2 - минимальный размер экрана = 500px
+fs1 - размер фонта при экране 1000px = 100px
+fs3 - размер фонта при экране 500px = 30px
+k = (fs1 - fs2)/(ss1 - ss2) == 0.14 // вычисляется 
+
+текущий размер фонта = fs3 + k * (100vw - ss2)
+                                  100vw - текущий размер экрана
+*/
+      :root {
+        --bg-color1: lightskyblue;
+        --k: (100 - 30)/(1000 - 500);
+        /* = 0.14 */
+      }
+
+      .text-wraper {
+        max-width: 1000px;
+        height: 100%;
+        background-color: var(--bg-color1);
+        line-height: 1;
+      }
+
+      .text1 {
+        font-size: calc(30px + var(--k)*(100vw - 500px));
+        background-color: white;
+        display: inline-block;
+      }
+
+      .text2 {
+        font-size: 30px;
+        background-color: white;
+        display: inline-block;
+      }
+    </style>
+    <div class="container">
+      <div class="text-wraper">
+        <div>
+          <span class="text1">Abc</span>
+        </div>
+        <div>
+          <span class="text2">Abc</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--  -->
+  <div style="display: none;" class="wraper" title="box-sizing">
+    <div class="container">
+      <div class="block1">
+        <div class="inner">border-box</div>
+      </div>
+      <div class="block2">
+        <div class="inner">content-box</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
