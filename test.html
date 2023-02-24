@@ -17,34 +17,72 @@
   <!--  -->
   <div style="-display: none;" class="wraper" title="image resize & reposition">
     <style>
+
+/*      
       :root {
-        --bg-color2: white;
-        --ds: (1000 - 500); /* 1000 начальный размер экрана 500 конечный */
-        --cs: (100vw - 500px); /* 100vw текущий размер экрана 500px конечный*/
-        --ks: (120 - 30)/var(--ds); /* коеффициент для размера */
-        --kx: (370 - 70)/var(--ds); /* коеффициент для X */
-        --ky: (30 - 130)/var(--ds); /* коеффициент для Y */
-      }
-      .img-wraper {
-        max-width: 1000px;
-        height: 80vh;
-        background-color: var(--bg-color2);
-        line-height: 1;
+        --ds: (_SRT_ - _END_);      // _SRT_ начальный размер экрана _END_ конечный
+        --cs: (100vw - _END_px);    // 100vw текущий размер экрана _END_px конечный
+        --ky: (_TOPend_ - _TOPsrt_)/var(--ds); // коеффициент для Y
+        --kx: (_LFTend_ - _LFTsrt_)/var(--ds); // коеффициент для X
       }
       .img1 {
+        top:  calc(_TOPsrt_px + var(--ky)*var(--cs));
+        left: calc(_LFTsrt_px + var(--kx)*var(--cs));
+      }
+*/
+
+      :root {
+        --bg-color2: white;
+
+        --ds: (1000 - 500);
+        --cs: (100vw - 500px);
+
+        --ky: (30 - (130))/var(--ds);
+        --kx: (370 - (70))/var(--ds);
+
+        --ks: (120 - 30)/var(--ds); 
+      }
+      /* 
+      :root {
+        --ds: (1000 - 500);           // 1000 начальный размер экрана 500 конечный
+        --cs: (100vw - 500px);        // 100vw текущий размер экрана 500px конечный
+        --ky: (30 - (130))/var(--ds); // коеффициент для Y 30 начальный top 130 конечный
+        --kx: (370 - (70))/var(--ds); // коеффициент для X 370 начальный left 70 конечный
+        --ks: (120 - 30)/var(--ds);   // коеффициент для размера 120 начальный width 30 конечный
+      } */
+      .img1 {
         position: absolute;
-        /* width: 120px; */
-        width: calc(30px + var(--ks)*var(--cs));
-        /* top: 30px; */
+
         top: calc(130px + var(--ky)*var(--cs));
-        /* left: 370px; */
         left: calc(70px + var(--kx)*var(--cs));
+
+        width: calc(30px + var(--ks)*var(--cs));
       }
       .img2 {
         position: absolute;
         width: 30px;
         top: 130px;
         left: 70px;
+      }
+
+      /* 
+      :root {
+        --ds: (1550 - 1200);
+        --cs: (100vw - 1200px);
+        --ky: (-12 - (-48))/var(--ds);
+        --kx: (328 - (147))/var(--ds);
+      }
+      .img1 {
+        top: calc(-12px + var(--ky)*var(--cs));
+        left: calc(328px + var(--kx)*var(--cs));
+      }  
+      */
+
+      .img-wraper {
+        max-width: 1000px;
+        height: 80vh;
+        background-color: var(--bg-color2);
+        line-height: 1;
       }
     </style>
     <div class="img-wraper">
