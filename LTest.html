@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta charset="utf-8" />
+<title>OpenStreetMap</title>
+ <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+ <script src="http://api-maps.yandex.ru/2.0/?load=package.map&lang=ru-RU" type="text/javascript"></script>
+ <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false"></script>
+ <script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+		<script src="l_geosearch_master/js/l.control.geosearch.js"></script>
+		<script src="l_geosearch_master/js/l.geosearch.provider.openstreetmap.js"></script>
+		<link rel="stylesheet" href="l_geosearch_master/css/l.geosearch.css" />
+<script src="layer/tile/Yandex.js"></script>
+<script src="layer/tile/Google.js"></script>
+ <style>
+ html, body, #map {
+            width: 100%; height: 100%; padding: 0; margin: 0;
+        }
+ </style>
+</head>
+<body>
+<div id="map"></div>
+<script type='text/javascript'>
+var map = new L.Map('map', {center: new L.LatLng(<?php echo $_POST["var1"]; ?>, <?php echo $_POST["var2"]; ?>), zoom: 16, zoomAnimation: false });
+var LeafIcon = L.Icon.extend({
+			options: {
+				iconSize:     [23, 23],
+				iconAnchor:   [11.5,11.5],
+				popupAnchor:  [0,0]
+			}
+		});
+		var greenIcon = new LeafIcon({iconUrl: 'img/cross-blue.png'}),
+cinemaIcon = new LeafIcon({iconUrl: 'img/cinema.png'}),
+restaurantIcon = new LeafIcon({iconUrl: 'img/restaurant.png'});
+var osm = new L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; created by <a>AgentSmith</a>'
+}).addTo(map);
+var yndx = new L.Yandex();
+var googleLayer = new L.Google('ROADMAP');
+ new L.Control.GeoSearch({
+            provider: new L.GeoSearch.Provider.OpenStreetMap()
+        }).addTo(map);
+new L.Control.Layers({'OSM':osm, "Яндекс":yndx, "Google":googleLayer}).addTo(map);
+	L.marker([<?php echo $_POST["var1"]; ?>, <?php echo $_POST["var2"]; ?>] , {icon: greenIcon}).addTo(map).bindPopup("<?php echo ''.$_POST['var4'].'-'.$_POST['var5'].'&#160;азимут&#160;-&#160;'.$_POST['var3'].''?>").openPopup();
+var polyline = L.polyline([[<?php echo $_POST["var1"]; ?>, <?php echo $_POST["var2"]; ?>]],
+{color: 'red',
+weight: 3,
+opacity: 0.5,
+smoothFactor: 1}).addTo(map);
+</script>
+</body>
+</html>
