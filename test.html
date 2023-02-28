@@ -14,11 +14,70 @@
 
 <body>
   <h1>test.html</h1>
-  <!--  -->
-  <div style="-display: none;" class="wraper" title="image resize & reposition">
-    <style>
 
-/*      
+  <div style="-display: none;" class="wraper" title="затемнение картинки">
+    <style>
+      .dark {
+        display: inline-block;
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        line-height: 0;
+      }
+
+      .img {
+        display: inline-block;
+        background: url("./images/maraphon.png");
+        /* background: url("/java/ann.jpg"); */
+        width: 146px;        height: 238px;
+        /* width: 100px;        height: 147px; */
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+      }
+
+      .gradient {
+        display: inline-block;
+        background: linear-gradient( 0deg, rgba(230, 125, 6, 0.534) 0%, rgba(253, 249, 182, 0) 100% );
+        /* background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.75)); */
+        width: 100%; height: 100%;
+        /* width: 100px;        height: 147px; */
+        opacity: 0;
+
+        transition: all 1s;
+      }
+
+      /* img:hover, */
+      .gradient:hover {
+        opacity: .5;
+      }
+    </style>
+
+<div class="img">
+  <div class="gradient"></div>
+</div>    
+
+    <!-- <div class="dark"><img src="./images/maraphon.png" alt="maraphon" style="width: 150px;"></div> -->
+    
+    <hr>
+
+<!-- 
+  368 600 / 146 238
+    <img src="./images/maraphon.png" alt="maraphon" style="width: 150px;"> 
+  -->
+
+    <!-- <img src="/java/ann.jpg" alt="">
+    <div class="dark"><img src="/java/ann.jpg" alt=""></div>
+    <div class="img">
+      <div class="gradient"></div>
+    </div> -->
+
+  </div>
+
+  <!--  -->
+  <div style="display: none;" class="wraper" title="image resize & reposition">
+    <style>
+      /*      
       :root {
         --ds: (_SRT_ - _END_);      // _SRT_ начальный размер экрана _END_ конечный
         --cs: (100vw - _END_px);    // 100vw текущий размер экрана _END_px конечный
@@ -40,8 +99,9 @@
         --ky: (30 - (130))/var(--ds);
         --kx: (370 - (70))/var(--ds);
 
-        --ks: (120 - 30)/var(--ds); 
+        --ks: (120 - 30)/var(--ds);
       }
+
       /* 
       :root {
         --ds: (1000 - 500);           // 1000 начальный размер экрана 500 конечный
@@ -58,6 +118,7 @@
 
         width: calc(30px + var(--ks)*var(--cs));
       }
+
       .img2 {
         position: absolute;
         width: 30px;
@@ -140,7 +201,7 @@ k = (fs1 - fs2)/(ss1 - ss2) == 0.14 // вычисляется
     </div>
   </div>
   <!--  -->
-  <div style="-display: none;" class="wraper" title="box-sizing">
+  <div style="display: none;" class="wraper" title="box-sizing">
     <div class="container">
       <div class="block1">
         <div class="inner">border-box</div>
