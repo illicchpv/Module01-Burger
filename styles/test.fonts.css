@@ -20,6 +20,10 @@ textarea{
 .sample-item{
   text-align: center;
   background-color: beige;
+  padding: 0 10px;
+}
+.sample-item span{
+  color:blue;
 }
 .font-google{
   font-family: 'Montserrat';
